@@ -1,37 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    android:padding="16dp"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textEnunciado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="60dp"
         android:fontFamily="@font/fonteInicio"
-        android:gravity="center"
         android:text="Em quanto tempo você se aposenta?"
-        android:textColor="@color/vermelho"
-        android:textSize="30dp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="180dp" />
+        android:textColor="#CA2251" />
 
     <EditText
         android:id="@+id/editTextIdade"
         android:layout_width="100dp"
-
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
         android:inputType="number"
         android:maxLength="3"
-        android:textColor="#626262"
-        android:textSize="10dp"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="260dp" />
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:hint="Idade"
+        android:textAlignment="center"
+        android:textColorHint="#616161"
+ />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Spinner
+        android:id="@+id/spinnerSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:padding="8dp"
+        android:textColor = "@color/white"
+    />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:id="@+id/buttonCalc"
+        android:fontFamily="@font/fonteInicio"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:backgroundTint="#5D3499"
+        android:paddingHorizontal="10dp"
+        android:text="Calcular"
+        app:icon = "@drawable/baseline_calculate_26"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+
+
+/>
+
+</LinearLayout>
