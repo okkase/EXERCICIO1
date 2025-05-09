@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity"
+    android:orientation="vertical"
 
     android:padding="16dp"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textEnunciado"
@@ -17,51 +17,73 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:textSize="60dp"
-        android:fontFamily="@font/fonteInicio"
+        android:fontFamily="@font/fonteinicio"
         android:text="Em quanto tempo você se aposenta?"
-        android:textColor="#CA2251" />
-
+        android:textColor="#CA2251"
+        android:textSize="60dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="80dp">
     <EditText
         android:id="@+id/editTextIdade"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
-        android:layout_gravity="center"
+        android:hint="Insira sua Idade"
         android:inputType="number"
         android:maxLength="3"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:hint="Idade"
         android:textAlignment="center"
+        android:textColor="#5D3499"
         android:textColorHint="#616161"
- />
+
+        android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/spinnerSexo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:padding="8dp"
-        android:textColor = "@color/white"
-    />
+        android:layout_height="50dp"
+        android:background="#5D3499"
+        android:padding="8dp" />
+</LinearLayout>
+
     <Button
+        android:id="@+id/buttonCalc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-     android:id="@+id/buttonCalc"
-        android:fontFamily="@font/fonteInicio"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:backgroundTint="#5D3499"
-        android:paddingHorizontal="10dp"
-        android:text="Calcular"
-        app:icon = "@drawable/baseline_calculate_26"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:backgroundTint="#5D3499"
+
+        android:paddingHorizontal="10dp"
+        android:text="Calcular"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:icon="@drawable/baseline_calculate_26"
 
 
-/>
+        />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/fonteinicio"
+        android:padding="10dp"
+
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Felipe Costabeber" />
+
 
 </LinearLayout>

@@ -24,18 +24,23 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,itens)
         binding.spinnerSexo.adapter = adapter
 
-        binding.buttonCalc.sentOnClickListener{
+        binding.buttonCalc.setOnClickListener{
             val sexoSelecionado = binding.spinnerSexo.selectedItem as String
             val idade = binding.editTextIdade.text.toString().toLongOrNull()
             var resultado: Long
             if (idade!= null) {
-                if (sexoSelecionado.trim() == "masculino" ) {
-                    resultado = 65 - idade
 
-                } else {
+                if (idade <65 && sexoSelecionado.trim() == "masculino" ) {
+                    resultado = 65 - idade
+                    binding.textResultado.text = "Você ainda precisa trabalhar $resultado Anos!!"
+
+                } else if(idade <62){
                     resultado = 62 - idade
+                    binding.textResultado.text = "Você ainda precisa trabalhar $resultado Anos!!"
                 }
-                binding.textResultado.text = "$resultado"
+
+
+
             }
 
         }
